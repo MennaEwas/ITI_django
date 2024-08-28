@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    {% block title%}<title>Mart</title>{%endblock title%}
+</head>
+
+{%block content%}
+<body>
+
+<h1>This is my Mart</h1>
+<form method="post">
+    {% csrf_token %}
+    {% for k, v in products_dict.items%}
+
+    <label for="{{k}}">
+        <input type="checkbox" id="{{v}}" name="options" value="{{k}}">
+        {{k}}:{{v}}
+    </label> <br>
+    
+{% endfor %}
+<button type="submit"> Submit</button>
+
+</form>
+
+{% include "parts/footer.html" %}
+
+</body>
+{%endblock content%}
+</html>
+
+
