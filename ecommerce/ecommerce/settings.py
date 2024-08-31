@@ -22,6 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = "django-insecure-!yrhl&finbgpb0sdqtqyym0q9(o#pix29a0eqqfjbmfhm8um&%"
 
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -37,9 +38,10 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "mart.apps.MartConfig",
-    "tracking_system",
-    
+    "rest_framework",
+    "mart", 
+    "products", 
+    "tracking_system"
 ]
 
 MIDDLEWARE = [
@@ -128,3 +130,6 @@ STATICFILES_DIRS=[
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+STATIC_ROOT = os.path.join(BASE_DIR, "media")
+STATIC_URL = "media/"

@@ -4,5 +4,5 @@ from . import views
 #route patterns with views of mart 
 urlpatterns = [
     path('', views.index, name = "index"),
-    path('/show', views.show, name="show"),
+    path('show', views.show, name="show"),
 ]
