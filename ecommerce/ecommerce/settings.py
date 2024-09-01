@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     "rest_framework",
     "mart", 
     "products", 
-    "tracking_system"
+    "tracking_system",
+    "login"
 ]
 
 MIDDLEWARE = [

@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    {% block title %}
+    Login
+    {% endblock title %}
+
+{% block content %}
+<body>
+<form method="POST">
+    {% csrf_token %}
+    {{ fo }}
+    <input type = "submit" value = "save">
+
+</form>
+</body>
+{% endblock content %}
